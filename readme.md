@@ -24,9 +24,7 @@ This is a simple cocktail app built using Ionic React. It allows users to search
 
 ## Screenshots
 
-![Main Screen](https://github.com/shoutcape/CocktailApp/blob/main/mainScreen.png)
-![Search Screen](https://github.com/shoutcape/CocktailApp/blob/main/searchScreen.png)
-![Details Screen](https://github.com/shoutcape/CocktailApp/blob/main/detailsScreen.png)
+<img src="https://github.com/shoutcape/CocktailApp/blob/main/pictures/mainScreen.png" width="400"> <img src="https://github.com/shoutcape/CocktailApp/blob/main/pictures/searchScreen.png" width="400"> <img src="https://github.com/shoutcape/CocktailApp/blob/main/pictures/detailsScreen.png" width="400">
 
 ## Author
 
