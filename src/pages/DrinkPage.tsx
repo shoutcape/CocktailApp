@@ -48,7 +48,8 @@ const DrinkPage : React.FC<DrinkPageProps> = ({match}) => {
                                     let measure = (information as any)[`strMeasure${i+1}`]
                                     if (measure && measure.includes('oz')) {
                                         const oz = parseFloat(measure.replace('oz', '').trim())
-                                        const cl = oz * 2.95735296
+                                        // this cl is because some drinks dont like oz
+                                        const cl = oz * 2
                                         console.log('measure', cl)
                                          measure = `${cl.toFixed(0)} cl`
                                     } else if (measure === null){
