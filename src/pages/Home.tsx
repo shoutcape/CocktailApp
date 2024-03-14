@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 
 const Home: React.FC = () => {
 
-  const { searchData, getDrinkDetails, randomDrink} = useApi()
+  const { searchData, randomDrink} = useApi()
   const [ randomdrink, setRandomDrinkId ] = useState<SearchResult[] | null>(null)
   const [ searchTerm, setSearchTerm ] = useState('')
   const [type, setType] = useState<SearchType>(SearchType.name)
