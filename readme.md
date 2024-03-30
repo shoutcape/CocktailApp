@@ -29,3 +29,7 @@ This is a simple cocktail app built using Ionic React. It allows users to search
 ## Author
 
 Ville Kautiainen
+
+## Website
+
+https://cocktailapplication.netlify.app/
