@@ -2,7 +2,7 @@
 
 This is a simple cocktail app built using Ionic React. It allows users to search for cocktails by name or ingredient and view details about each cocktail. Additionally, users can try their luck and get a random cocktail suggestion.
 
-## Try it out
+## Try it out (made for phones)
 
 https://cocktailapplication.netlify.app/
 
