@@ -1,6 +1,7 @@
 import { IonAvatar, IonButton, IonContent, IonFooter, IonHeader, IonItem, IonLabel, IonList, IonPage, IonSearchbar, IonSelect, IonSelectOption, IonTitle, IonToolbar, useIonAlert, useIonLoading, useIonViewWillEnter } from '@ionic/react';
 import useApi, { SearchResult, SearchType } from '../hooks/useApi'
 import { useEffect, useState } from 'react';
+import './homepage.css'
 
 
 
@@ -28,10 +29,12 @@ const Home: React.FC = () => {
       await dismiss()
       if (result?.Error) {
         presentAlert(result.Error)
-      } else if (result.drinks) {
-          setResults(result.drinks)
+      } else if (result.drinks == 'no data found') {
+          setResults([])
       } else if (result.ingredients) {
           setResults(result.ingredients)
+      } else if (result.drinks) {
+          setResults(result.drinks)
       }
     }    
     loadDrinks()
@@ -72,7 +75,7 @@ useIonViewWillEnter(() => {
               </IonSelect>
             </IonItem>
             <IonList>
-              {results && results.map((item: SearchResult) => (
+              {results.length > 0 && results.map((item: SearchResult) => (
                 <IonItem button key={item.idDrink} routerLink={`/Cocktails/${item.idDrink}`}>
                   <IonAvatar slot='start'>
                     <img src={item.strDrinkThumb} alt={item.strDrink} />
@@ -85,7 +88,7 @@ useIonViewWillEnter(() => {
             </IonList>    
         </IonContent>
         <IonFooter>
-          <IonButton expand='full' routerLink={`/Cocktails/${randomdrink}`}>
+          <IonButton className='try-button' expand='full' routerLink={`/Cocktails/${randomdrink}`}>
             Try your luck
           </IonButton>
         </IonFooter>
